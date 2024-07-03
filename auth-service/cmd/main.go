@@ -1,14 +1,14 @@
 package main
 
 import (
-	_ "blogs-api/docs"
-	"blogs-api/internal/api"
-	"blogs-api/internal/db"
-	"blogs-api/internal/users/service"
-	"blogs-api/internal/users/store"
-	"blogs-api/internal/utils"
-	"blogs-api/pkg"
+	_ "auth-service/docs"
 	"database/sql"
+	"github.com/dkhvan-dev/alabs_project/auth-service/internal/api"
+	"github.com/dkhvan-dev/alabs_project/auth-service/internal/db"
+	"github.com/dkhvan-dev/alabs_project/auth-service/internal/users/service"
+	"github.com/dkhvan-dev/alabs_project/auth-service/internal/users/store"
+	"github.com/dkhvan-dev/alabs_project/common-libraries/logger"
+	"github.com/dkhvan-dev/alabs_project/common-libraries/utils"
 	_ "github.com/golang-migrate/migrate/source/file"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
@@ -34,8 +34,8 @@ func main() {
 
 func start() {
 	// init logger
-	pkg.InitLogger()
-	pkg.Logger.Info("Starting server")
+	logger.InitLogger()
+	commonLogger.Info("Starting server")
 
 	// load environments
 	if err := godotenv.Load(); err != nil {

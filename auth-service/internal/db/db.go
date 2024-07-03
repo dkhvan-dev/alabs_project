@@ -1,7 +1,6 @@
 package db
 
 import (
-	"blogs-api/internal/utils"
 	"database/sql"
 	"errors"
 	"fmt"
