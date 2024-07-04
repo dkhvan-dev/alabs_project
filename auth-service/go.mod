@@ -18,6 +18,7 @@ require (
 require (
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/distribution/reference v0.6.0 // indirect
+	github.com/dkhvan-dev/alabs_project/common-libraries v0.0.0-20240704050706-be02840f3f8f // indirect
 	github.com/docker/docker v27.0.3+incompatible // indirect
 	github.com/docker/go-connections v0.5.0 // indirect
 	github.com/docker/go-units v0.5.0 // indirect
