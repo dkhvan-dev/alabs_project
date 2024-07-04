@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"blogs-api/utils"
 	"fmt"
+	"github.com/dkhvan-dev/alabs_project/common-libraries/utils"
 	"github.com/golang-jwt/jwt"
 	"github.com/gorilla/context"
 	"net/http"
