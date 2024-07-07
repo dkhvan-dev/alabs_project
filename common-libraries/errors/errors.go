@@ -5,36 +5,36 @@ import (
 	"net/http"
 )
 
-type Error struct {
+type CustomError struct {
 	Msg  string
 	Code int
 }
 
-func (e Error) Error() string {
+func (e CustomError) Error() string {
 	return e.Msg
 }
 
-func NewNotFound(message string) *Error {
-	return &Error{message, 404}
+func NewNotFound(message string) *CustomError {
+	return &CustomError{message, 404}
 }
 
-func NewBadRequest(message string) *Error {
-	return &Error{message, 400}
+func NewBadRequest(message string) *CustomError {
+	return &CustomError{message, 400}
 }
 
-func NewUnauthorized(message string) *Error {
-	return &Error{message, 401}
+func NewUnauthorized(message string) *CustomError {
+	return &CustomError{message, 401}
 }
 
-func NewForbidden(message string) *Error {
-	return &Error{message, 403}
+func NewForbidden(message string) *CustomError {
+	return &CustomError{message, 403}
 }
 
-func NewInternal(message string) *Error {
-	return &Error{message, 500}
+func NewInternal(message string) *CustomError {
+	return &CustomError{message, 500}
 }
 
-func HandleError(w http.ResponseWriter, err *Error) {
+func HandleError(w http.ResponseWriter, err *CustomError) {
 	errJSON := struct {
 		Error string `json:"error"`
 	}{
